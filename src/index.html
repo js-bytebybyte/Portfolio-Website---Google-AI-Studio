@@ -1,13 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>PortfolioFeb</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jolande Steenput | Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Zone.js is required for Angular -->
+    <script src="https://unpkg.com/zone.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+              mono: ['Space Mono', 'monospace'],
+            },
+            colors: {
+              lumon: {
+                50: '#f0f4f8',
+                100: '#dbe4ed',
+                200: '#baccdb',
+                300: '#8FAABF',
+                400: '#648dae',
+                500: '#466d8f',
+                600: '#34526e',
+                700: '#2a4157',
+                800: '#253546',
+                900: '#151e29',
+              },
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #8FAABF;
+        -webkit-font-smoothing: antialiased;
+      }
+      .bg-data-grid {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      @keyframes bounce { 0%, 100% { transform: translateY(36px); } 50% { transform: translateY(46px); } }
+      @keyframes bounce2 { 0%, 100% { transform: translateY(46px); } 50% { transform: translateY(56px); } }
+      @keyframes umbral { 0% { stop-color: rgba(255, 255, 255, 0.1); } 50% { stop-color: rgba(255, 255, 255, 0.4); } 100% { stop-color: rgba(255, 255, 255, 0.1); } }
+      @keyframes particles { 0%, 100% { transform: translateY(16px); } 50% { transform: translateY(6px); } }
+      #particles { animation: particles 4s ease-in-out infinite; }
+      #animatedStop { animation: umbral 4s infinite; }
+      #bounce { animation: bounce 4s ease-in-out infinite; transform: translateY(36px); }
+      #bounce2 { animation: bounce2 4s ease-in-out infinite; transform: translateY(46px); animation-delay: 0.5s; }
+      .monitor-scanline {
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 100%);
+        background-size: 100% 4px;
+        pointer-events: none;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "@angular/core": "https://esm.sh/@angular/core@19.1.5",
+    "@angular/common": "https://esm.sh/@angular/common@19.1.5",
+    "@angular/compiler": "https://esm.sh/@angular/compiler@19.1.5",
+    "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@19.1.5",
+    "@angular/platform-browser-dynamic": "https://esm.sh/@angular/platform-browser-dynamic@19.1.5",
+    "rxjs": "https://esm.sh/rxjs@7.8.1",
+    "lucide": "https://esm.sh/lucide@0.475.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
-  <app-root></app-root>
-</body>
+  <body>
+    <app-root></app-root>
+    <!-- <script type="module" src="./main.ts"></script> -->
+  </body>
 </html>
