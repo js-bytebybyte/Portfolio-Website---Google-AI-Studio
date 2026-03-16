@@ -14,7 +14,14 @@ export interface Project {
 
 export interface SkillCategory {
   title: string;
-  skills: string[];
+  skills: SkillItem[];
+}
+
+export type SkillLevel = 'Beginner' | 'Intermediate' | 'Proficient' | 'Expert';
+
+export interface SkillItem {
+  name: string;
+  level: SkillLevel;
 }
 
 export interface SocialLink {

@@ -1,23 +1,51 @@
-<section id="skills" class="py-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+<section id="skills" class="py-20 px-4 md:px-8 lg:px-12 max-w-7xl mx-auto">
       <div class="bg-lumon-900 text-white rounded-t-lg p-4 flex justify-between items-center border-b border-lumon-700">
         <h2 class="font-mono text-lg font-bold uppercase tracking-widest">Employee Capability Matrix</h2>
       </div>
-      <div class="bg-lumon-800 p-8 md:p-12 rounded-b-lg shadow-2xl border border-lumon-700">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div *ngFor="let category of skills">
-            <h3 class="font-display text-xl font-bold text-white mb-6 pb-2 border-b border-lumon-600">{{category.title}}</h3>
-            <div class="space-y-6">
-              <div *ngFor="let skill of category.skills; let i = index" class="group">
-                <div class="flex justify-between text-xs font-mono text-lumon-300 mb-1 uppercase">
-                  <span>{{skill}}</span>
-                  <span>{{95 - (i * 3)}}%</span>
-                </div>
-                <div class="h-2 bg-lumon-700 rounded-sm overflow-hidden">
-                  <div class="h-full bg-lumon-300 transition-all duration-1000" [style.width.%]="95 - (i * 3)"></div>
+
+      <div class="bg-lumon-800 p-6 md:p-10 rounded-b-lg shadow-2xl border border-lumon-700">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          <article
+            *ngFor="let category of matrix; trackBy: trackCategory"
+            class="mdr-category rounded border border-lumon-600/70 bg-lumon-900/55 p-4 md:p-5"
+          >
+            <h3 class="font-display text-base md:text-lg font-bold text-white mb-4 pb-2 border-b border-lumon-600">
+              {{ category.title }}
+            </h3>
+
+            <div class="mdr-processing-area relative overflow-hidden rounded border border-lumon-700/90 bg-lumon-900/80">
+              <div class="mdr-scanline"></div>
+
+              <span
+                *ngFor="let glyph of category.glyphs; trackBy: trackGlyph"
+                class="mdr-glyph"
+                [style.left.%]="glyph.left"
+                [style.top.%]="glyph.top"
+                [style.animationDelay.s]="glyph.delay"
+              >
+                {{ glyph.value }}
+              </span>
+
+              <div
+                *ngFor="let pill of category.pills; trackBy: trackPill"
+                class="mdr-pill-wrapper"
+                [style.left.%]="pill.left"
+                [style.--fall-delay]="pill.delay + 's'"
+                [style.--fall-duration]="pill.duration + 's'"
+                [style.--fall-start]="pill.start + '%'"
+              >
+                <div class="mdr-pill group font-mono text-[10px] uppercase tracking-wider text-lumon-900">
+                  <span class="truncate max-w-35">{{ pill.name }}</span>
+                  <span class="mdr-tag">{{ pill.level }}</span>
+
+                  <div class="mdr-tooltip pointer-events-none">
+                    <span class="font-semibold text-lumon-100">{{ pill.name }}</span>
+                    <span class="text-lumon-300">{{ pill.level }} knowledge</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>

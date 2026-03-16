@@ -5,7 +5,7 @@
             PROJECTS
           </h2>
           <p class="font-mono text-sm text-lumon-800 font-bold uppercase tracking-widest opacity-80">
-            Current Refinement: Proximus DQT dashboard
+            Current Refinement: Coffee Fund Me
           </p>
         </div>
         <div class="px-4 py-2 border border-white/60 rounded bg-green-500 backdrop-blur-sm">
@@ -20,6 +20,15 @@
           <div class="border-b-2 border-white/60 p-2 flex justify-between items-center bg-white/20">
              <span class="font-mono text-lg font-bold text-lumon-900">0{{i + 1}}</span>
              <i data-lucide="database" class="w-4 h-4 text-lumon-800 opacity-60"></i>
+          </div>
+
+          <div class="relative aspect-video overflow-hidden border-b-2 border-white/40 bg-lumon-900/90">
+            <img
+              [src]="project.image"
+              [alt]="project.title + ' project preview'"
+              class="h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-[1.02]"
+            />
+            <div class="absolute inset-0 bg-linear-to-t from-lumon-900/55 via-transparent to-transparent"></div>
           </div>
 
           <div class="relative flex-1 p-6 flex flex-col min-h-420px">

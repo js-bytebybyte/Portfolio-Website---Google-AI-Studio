@@ -37,8 +37,8 @@ export const PROJECTS: Project[] = [
     solution: 'Developed a robust client/server coordination system using TypeScript and WebSockets for real-time sync.',
     impact: 'Successfully implemented full tournament flow, match logic, and player progression under concurrency.',
     stack: ['TypeScript', 'WebSockets', 'Node.js', 'PostgreSQL'],
-    image: 'https://picsum.photos/800/600?random=2',
-    github: 'https://github.com/js-bytebybyte'
+    image: 'images/ft_transcendence-pong-game-start.png',
+    github: 'https://github.com/js-bytebybyte/ft_transcendence'
   },
   {
     id: 'MDR-003',
@@ -50,39 +50,68 @@ export const PROJECTS: Project[] = [
     impact: 'Strengthened deep understanding of networking fundamentals and server-side architecture.',
     stack: ['C++98', 'Networking', 'Systems Programming'],
     image: 'https://picsum.photos/800/600?random=3',
-    github: 'https://github.com/js-bytebybyte'
+    github: 'https://github.com/js-bytebybyte/webserv'
   }
 ];
 
 export const SKILLS: SkillCategory[] = [
   {
     title: "Programming Languages",
-    skills: ["JS/TypeScript", "C", "C++", "Python"]
+    skills: [
+      { name: 'JS/TypeScript', level: 'Proficient' },
+      { name: 'C', level: 'Proficient' },
+      { name: 'C++', level: 'Proficient' },
+      { name: 'Python', level: 'Beginner' },
+    ]
   },
   {
     title: "Frontend & Web",
-    skills: ["Angular", "PrimeNG", "TailwindCSS", "Sass (SCSS)", "HTML", "CSS"]
+    skills: [
+      { name: 'Angular', level: 'Intermediate' },
+      { name: 'PrimeNG', level: 'Proficient' },
+      { name: 'TailwindCSS', level: 'Proficient' },
+      { name: 'Sass (SCSS)', level: 'Intermediate' },
+      { name: 'HTML', level: 'Intermediate' },
+      { name: 'CSS', level: 'Proficient' },
+    ]
   },
   {
     title: "Backend & APIs",
-    skills: ["REST APIs", "OpenAPI / Swagger", "Node.js"]
+    skills: [
+      { name: 'REST APIs', level: 'Proficient' },
+      { name: 'OpenAPI / Swagger', level: 'Proficient' },
+      { name: 'Node.js', level: 'Intermediate' },
+    ]
   },
   {
     title: "DevOps & Systems",
-    skills: ["Docker", "Linux", "Bash", "Vim", "Git / GitHub"]
+    skills: [
+      { name: 'Docker', level: 'Intermediate' },
+      { name: 'Linux', level: 'Proficient' },
+      { name: 'Bash', level: 'Intermediate' },
+      { name: 'Vim', level: 'Intermediate' },
+      { name: 'Git / GitHub', level: 'Proficient' },
+    ]
   },
   {
     title: "E-commerce & Scripting",
-    skills: ["Shopify (Liquid)", "Metafields"]
+    skills: [
+      { name: 'Shopify (Liquid)', level: 'Proficient' },
+      { name: 'Metafields', level: 'Intermediate' },
+    ]
   },
   {
     title: "AI & Collaboration",
-    skills: ["GitHub Copilot", "Prompt Engineering", "Confluence"]
+    skills: [
+      { name: 'GitHub Copilot', level: 'Proficient' },
+      { name: 'Prompt Engineering', level: 'Proficient' },
+      { name: 'Confluence', level: 'Beginner' },
+    ]
   }
 ];
 
 export const ABOUT_TEXT = [
-  "I am a career switcher from Corporate Finance (7 years) to Software Development, currently refining my skills as a Junior Web Developer. My experience at Proximus involves building data dashboards and internal tools using Angular and Python APIs.",
+  "Hi ! I am a career switcher from Corporate Finance (7 years) to Software Development, currently refining my skills as a Web Developer. My experience at Proximus involves building data dashboards and internal tools using Angular and Python APIs.",
   "My background in finance taught me the importance of structured problem-solving and translating complex data into clear, actionable insights—skills I now apply directly to software engineering. I am a student at 42 Belgium, where peer-to-peer learning and project-based curriculum are fundamental.",
   "When I am not in the 'severed' state of deep work, I enjoy dancing and sports like mat pilates and running, reading, and watching series like Severance and The 3 Body Problem. This website was inspired by Severance and built using Angular and TailwindCSS."
 ];

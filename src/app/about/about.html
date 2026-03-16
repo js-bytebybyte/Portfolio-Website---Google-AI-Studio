@@ -1,5 +1,5 @@
- <section id="about" class="py-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-      <div class="max-w-5xl mx-auto">
+ <section id="about" class="py-20 px-4 md:px-8 lg:px-12 max-w-7xl mx-auto">
+   <div class="max-w-6xl mx-auto">
         <div class="flex items-center gap-4 mb-10">
           <div class="h-px bg-lumon-800/30 flex-1"></div>
           <h2 class="font-display text-3xl font-bold text-lumon-900 uppercase tracking-tight">Personnel Record: JOLANDE STEENPUT</h2>
@@ -38,19 +38,19 @@
           </div>
 
           <!-- More Info On Career & Skills -->
-          <div class="md:col-span-12">
+          <div class="md:col-span-12 bg-white/50 p-8 rounded border border-white shadow-sm backdrop-blur-sm">
             <!-- Tabs -->
-            <p-tabs value="0" class="bg-transparent border-b border-lumon-100">
-              <p-tablist class="block font-mono text-[10px] uppercase text-lumon-400 bg-lumon-800 font-bold mb-4">
-                <p-tab value="0"> Education</p-tab>
-                <p-tab value="1"> Certifications</p-tab>
-                <p-tab value="2"> Development Experience (1y)</p-tab>
-                <p-tab value="3"> Finance Experience (7y)</p-tab>
+            <p-tabs value="0" class="block">
+              <p-tablist class="flex flex-wrap gap-2 p-2 rounded bg-lumon-800/95 mb-6">
+                <p-tab value="0" class="font-mono text-[10px] uppercase tracking-wider text-lumon-200 font-bold px-3 py-2 rounded">Education</p-tab>
+                <p-tab value="1" class="font-mono text-[10px] uppercase tracking-wider text-lumon-200 font-bold px-3 py-2 rounded">Certifications</p-tab>
+                <p-tab value="2" class="font-mono text-[10px] uppercase tracking-wider text-lumon-200 font-bold px-3 py-2 rounded">Development Experience (1y)</p-tab>
+                <p-tab value="3" class="font-mono text-[10px] uppercase tracking-wider text-lumon-200 font-bold px-3 py-2 rounded">Finance Experience (7y)</p-tab>
               </p-tablist>
 
               <!-- Education -->
               <p-tabpanel value="0">
-                <div class="space-y-5 p-4 border border-lumon-100 bg-lumon-50/50 rounded"> 
+                <div class="space-y-5 p-6 border border-lumon-100 bg-lumon-50/50 rounded"> 
                   <div>
                       <div class="flex justify-between items-start mb-1">
                           <span class="font-bold text-lumon-900 text-sm">Software Engineer</span>
@@ -73,7 +73,7 @@
 
               <!-- Certifications -->
               <p-tabpanel value="1">
-                <div class="p-4 border border-lumon-100 bg-lumon-50/50 rounded">
+                <div class="p-6 border border-lumon-100 bg-lumon-50/50 rounded">
                   <span class="block font-mono text-[10px] uppercase text-lumon-400 font-bold mb-1">Certifications</span>
                     <div class="flex justify-between items-start mb-1">
                       <span class="font-bold text-lumon-900 text-sm">AWS Cloud Practitioner</span>
@@ -85,75 +85,55 @@
               <!-- Development Experience -->
               <p-tabpanel value="2">
 
-                <p-timeline [value]="events" align="alternate" class="mb-5">
-                    <ng-template pTemplate="marker"let-event>
-                        <span class="flex w-8 h-8 items-center justify-center text-white rounded-full shadow-sm">
-                            <i [class]="event.id"></i>
-                        </span>
-                    </ng-template>
-                    <ng-template pTemplate="content" let-event>
-                        <p-card [header]="event.role" [subheader]="event.date">
-                            <img *ngIf="event.image" [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image" [alt]="event.companyName" width="200" class="shadow" />
-                            <p>
-                              {{event.tasks}}
-                            </p>
-                            <p-button label="Read more" [text]="true" />
-                        </p-card>
-                    </ng-template>
-                </p-timeline>
-                <div class="space-y-5 p-4 border border-lumon-100 bg-lumon-50/50 rounded">
-                  <div class="space-y-12">
-                    <div class="space-y-5 p-4 border border-lumon-100 bg-lumon-50/50 rounded">
-                      <div class="space-y-6 relative pl-6 border-lumon-300">
-                        <!-- Proximus -->
-                        <div class="relative">
-                          <div class="absolute -left-4 top-1 w-5 h-5 rounded-full bg-lumon-400 border-4 border-white"></div>
-                          <div class="flex justify-between items-start mb-1">
-                            <span class="font-bold text-lumon-900 text-sm">Web Application Developer</span>
-                            <span class="text-xs text-lumon-600 font-mono">09/2025 – 02/2026</span>
-                          </div>
-                          <span class="text-xs font-medium text-lumon-700 block mb-3">Proximus Group | Brussels</span>
-                          <ul class="text-xs text-lumon-600 space-y-1 leading-relaxed">
-                            <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Migrating an internal Data Quality Portal from Python Dash to a decoupled architecture: Angular frontend + API backend, used by internal data teams (200+ users).</span></li>
-                            <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Building an Angular + PrimeNG frontend for data quality analysis.</span></li>
-                            <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Designing and maintaining the OpenAPI specification (API-first) and integrating with OpenAPI-generated REST services.</span></li>
-                            <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Producing technical documentation to support maintainability, onboarding, and handover (Confluence).</span></li>
-                            <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Using GitHub Copilot and effective prompting to accelerate development and iteration cycles.</span></li>
-                          </ul>
-                        </div>
-                        <!-- Fantail -->
-                        <div class="relative">
-                          <div class="absolute -left-4 top-1 w-5 h-5 rounded-full bg-lumon-400 border-4 border-white"></div>
-                          <div class="flex justify-between items-start mb-1">
-                            <span class="font-bold text-lumon-900 text-sm">Shopify Web Developer</span>
-                            <span class="text-xs text-lumon-600 font-mono">02/2025 – 05/2025</span>
-                          </div>
-                          <span class="text-xs font-medium text-lumon-700 block mb-3">Fantail | Vadigran Group | Brussels</span>
-                          <ul class="text-xs text-lumon-600 space-y-1 leading-relaxed">
-                            <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Redesigned Fantail's Shopify website for premium dog beds and cat furniture.</span></li>
-                            <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Implemented a fully custom Shopify theme using Liquid and Tailwindcss.</span></li>
-                            <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Reduced product catalog by 55% through smart use of variants and metafields.</span></li>
-                            <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Enhanced UX with custom color swatches, icon-based mobile nav, and filters.</span></li>
-                            <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Improved SEO structure and page speed across devices.</span></li>
-                            <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Collaborated with marketing to align visual design and product presentation.</span></li>
-                          </ul>
-                        </div>
+                <div class="space-y-6 p-6 border border-lumon-100 bg-lumon-50/50 rounded">
+                  <div class="space-y-6 relative pl-6 border-l-2 border-lumon-200">
+                    <!-- Proximus -->
+                    <div class="relative">
+                      <div class="absolute -left-[1.95rem] top-1 w-5 h-5 rounded-full bg-lumon-400 border-4 border-white"></div>
+                      <div class="flex justify-between items-start mb-1 gap-3">
+                        <span class="font-bold text-lumon-900 text-sm">Web Application Developer</span>
+                        <span class="text-xs text-lumon-600 font-mono whitespace-nowrap">09/2025 – 02/2026</span>
                       </div>
+                      <span class="text-xs font-medium text-lumon-700 block mb-3">Proximus Group | Brussels</span>
+                      <ul class="text-xs text-lumon-600 space-y-1 leading-relaxed">
+                        <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Migrating an internal Data Quality Portal from Python Dash to a decoupled architecture: Angular frontend + API backend, used by internal data teams (200+ users).</span></li>
+                        <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Building an Angular + PrimeNG frontend for data quality analysis.</span></li>
+                        <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Designing and maintaining the OpenAPI specification (API-first) and integrating with OpenAPI-generated REST services.</span></li>
+                        <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Producing technical documentation to support maintainability, onboarding, and handover (Confluence).</span></li>
+                        <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Using GitHub Copilot and effective prompting to accelerate development and iteration cycles.</span></li>
+                      </ul>
                     </div>
-                   
+                    <!-- Fantail -->
+                    <div class="relative">
+                      <div class="absolute -left-[1.95rem] top-1 w-5 h-5 rounded-full bg-lumon-400 border-4 border-white"></div>
+                      <div class="flex justify-between items-start mb-1 gap-3">
+                        <span class="font-bold text-lumon-900 text-sm">Shopify Web Developer</span>
+                        <span class="text-xs text-lumon-600 font-mono whitespace-nowrap">02/2025 – 05/2025</span>
+                      </div>
+                      <span class="text-xs font-medium text-lumon-700 block mb-3">Fantail | Vadigran Group | Brussels</span>
+                      <ul class="text-xs text-lumon-600 space-y-1 leading-relaxed">
+                        <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Redesigned Fantail's Shopify website for premium dog beds and cat furniture.</span></li>
+                        <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Implemented a fully custom Shopify theme using Liquid and Tailwindcss.</span></li>
+                        <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Reduced product catalog by 55% through smart use of variants and metafields.</span></li>
+                        <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Enhanced UX with custom color swatches, icon-based mobile nav, and filters.</span></li>
+                        <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Improved SEO structure and page speed across devices.</span></li>
+                        <li class="flex gap-2"><span class="text-lumon-400">•</span> <span>Collaborated with marketing to align visual design and product presentation.</span></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </p-tabpanel>
 
               <!-- Finance Experience -->
               <p-tabpanel value="3">
-                <div class="space-y-5 p-4 border border-lumon-100 bg-lumon-50/50 rounded"> 
+                <div class="space-y-6 p-6 border border-lumon-100 bg-lumon-50/50 rounded"> 
+                    <div class="space-y-6 relative pl-6 border-l-2 border-lumon-200">
                     <!-- ECDPM -->
                     <div class="relative">
-                      <div class="absolute -left-4 top-1 w-5 h-5 rounded-full bg-lumon-400 border-4 border-white"></div>
+                      <div class="absolute -left-[1.95rem] top-1 w-5 h-5 rounded-full bg-lumon-400 border-4 border-white"></div>
                       <div class="flex justify-between items-start mb-1">
                         <span class="font-bold text-lumon-900 text-sm">Corporate Finance Officer</span>
-                        <span class="text-xs text-lumon-600 font-mono">2020 – 2023</span>
+                        <span class="text-xs text-lumon-600 font-mono whitespace-nowrap">2020 – 2023</span>
                       </div>
                       <span class="text-xs font-medium text-lumon-700 block mb-3">ECDPM | Brussels</span>
                       <ul class="text-xs text-lumon-600 space-y-1 leading-relaxed">
@@ -165,12 +145,13 @@
                     </div>
                     <!-- Publicis & Deloitte -->
                     <div class="relative">
-                      <div class="absolute -left-4 top-1 w-5 h-5 rounded-full bg-lumon-400 border-4 border-white"></div>
+                      <div class="absolute -left-[1.95rem] top-1 w-5 h-5 rounded-full bg-lumon-400 border-4 border-white"></div>
                       <div class="flex justify-between items-start mb-1">
                         <span class="font-bold text-lumon-900 text-sm">FP&A / Controlling</span>
-                        <span class="text-xs text-lumon-600 font-mono">2016 – 2020</span>
+                        <span class="text-xs text-lumon-600 font-mono whitespace-nowrap">2016 – 2020</span>
                       </div>
                       <span class="text-xs font-medium text-lumon-700 block mb-3">Publicis Groupe & Deloitte | Brussels</span>
+                    </div>
                     </div>
                 </div>
               </p-tabpanel>
