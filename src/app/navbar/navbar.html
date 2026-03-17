@@ -1,21 +1,21 @@
-   <nav [ngClass]="isScrolled ? 'bg-lumon-200/90 backdrop-blur-md border-white/40 shadow-sm' : 'bg-transparent border-transparent'"
+     <nav [ngClass]="isScrolled ? 'bg-lumon-900/90 backdrop-blur-md border-lumon-700/70 shadow-[0_8px_24px_rgba(0,0,0,0.35)]' : 'bg-transparent border-transparent'"
          class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b h-20">
       <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 h-full flex items-center justify-between">
         <a href="#" class="flex items-center gap-2 group">
           <div class="w-8 h-8 bg-lumon-800 text-white flex items-center justify-center rounded-md font-display font-bold text-xl group-hover:bg-lumon-600 transition-colors">
             JS
           </div>
-          <span class="font-display font-bold text-lg tracking-tight text-lumon-900 uppercase">
-            Steenput<span class="text-lumon-500">.IO</span>
+          <span class="font-display font-bold text-lg tracking-tight text-lumon-100 uppercase">
+            Steenput<span class="text-lumon-400">.IO</span>
           </span>
         </a>
 
         <div class="hidden md:flex items-center gap-8">
           <a *ngFor="let link of links" [href]="link.href" 
-             class="text-xs font-mono font-bold tracking-widest uppercase text-lumon-700 hover:text-lumon-900 hover:underline decoration-2 underline-offset-4 transition-all">
+             class="text-xs font-mono font-bold tracking-widest uppercase text-lumon-300 hover:text-white hover:underline decoration-2 underline-offset-4 transition-all">
             {{link.label}}
           </a>
-          <a href="#contact" class="text-xs font-mono font-bold uppercase tracking-widest px-6 py-2 bg-lumon-800 text-white rounded hover:bg-lumon-700 transition-colors shadow-lg shadow-lumon-800/20">
+          <a href="#contact" class="text-xs font-mono font-bold uppercase tracking-widest px-6 py-2 bg-lumon-700 text-white rounded-sm hover:bg-lumon-600 transition-colors shadow-lg shadow-lumon-900/40 border border-lumon-500/50">
             Initiate Contact
           </a>
         </div>

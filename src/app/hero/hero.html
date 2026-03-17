@@ -1,41 +1,153 @@
 
-<section id="home" class="min-h-screen flex flex-col justify-center px-4 md:px-8 lg:px-12 max-w-7xl mx-auto py-32 relative">
-      <div class="max-w-3xl mb-8 animate-fade-in">
-        <div class="flex justify-between text-xs font-mono font-bold text-lumon-800 mb-1 uppercase tracking-widest">
-          <span>Employee Profile Optimization</span>
-          <span>98% Complete</span>
-        </div>
-        <div class="w-full h-6 border-2 border-white/50 rounded-sm p-0.5 relative bg-white/5">
-          <div class="h-full bg-gradient-to-r from-lumon-600 to-lumon-500 w-[98%] shadow-[0_0_10px_rgba(70,109,143,0.5)]"></div>
-          <div class="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.2)_50%,transparent_100%)] opacity-30 w-full animate-pulse"></div>
-        </div>
-      </div>
+<section id="home" class="hero-section min-h-screen relative overflow-hidden flex flex-col bg-lumon-900">
 
-      <div class="max-w-4xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 bg-lumon-800/10 border border-lumon-800/20 rounded mb-6 backdrop-blur-sm">
-          <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-          <span class="text-xs font-mono font-bold text-lumon-800 uppercase tracking-wider">System: Online</span>
-        </div>
-        
-        <h1 class="font-display text-5xl md:text-7xl font-bold text-lumon-900 leading-[1] mb-8 tracking-tight drop-shadow-sm">
-          {{content.headline}}
-        </h1>
-        
-        <p class="text-xl md:text-2xl text-lumon-700 font-medium leading-relaxed max-w-2xl border-l-4 border-lumon-500 pl-6 mb-12">
-          {{content.subtext}}
-        </p>
-        
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#work" class="px-8 py-4 bg-lumon-800 text-white rounded font-mono text-sm font-bold uppercase tracking-wider hover:bg-lumon-900 transition-all text-center">
-            Access Data
-          </a>
-          <a href="#about" class="px-8 py-4 bg-transparent border-2 border-lumon-800 text-lumon-900 rounded font-mono text-sm font-bold uppercase tracking-wider hover:bg-lumon-800 hover:text-white transition-all text-center">
-            Read Bio
-          </a>
-        </div>
+  <!-- Scanline overlay -->
+  <div class="scanline pointer-events-none"></div>
+
+  <!-- Background grid -->
+  <div class="absolute inset-0 bg-data-grid opacity-30 pointer-events-none"></div>
+
+  <!-- Faint background numbers -->
+  <div class="absolute inset-0 pointer-events-none select-none overflow-hidden" aria-hidden="true">
+    <span class="absolute top-16 left-[5%] font-mono text-[10rem] font-bold text-lumon-700/10 leading-none">06</span>
+    <span class="absolute top-1/3 right-[3%] font-mono text-[8rem] font-bold text-lumon-700/10 leading-none">19</span>
+    <span class="absolute bottom-24 left-[12%] font-mono text-[7rem] font-bold text-lumon-700/10 leading-none">42</span>
+    <span class="absolute bottom-16 right-[15%] font-mono text-[6rem] font-bold text-lumon-700/10 leading-none">73</span>
+  </div>
+
+  <!-- Top progress bar -->
+  <div class="relative z-10 w-full px-4 md:px-10 pt-28 pb-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex justify-between text-xs font-mono font-bold text-lumon-400 mb-1 uppercase tracking-widest">
+        <span>Employee Profile Optimization</span>
+        <span>98% Complete</span>
       </div>
-      
-      <div class="absolute right-0 top-1/4 opacity-10 font-mono text-9xl font-bold text-white pointer-events-none select-none hidden lg:block leading-none text-right">
-        06<br/>19<br/>42
+      <div class="w-full h-1.5 border border-lumon-600/50 rounded-sm relative bg-lumon-800/50">
+        <div class="h-full bg-linear-to-r from-lumon-500 to-lumon-400 w-[98%] shadow-[0_0_8px_rgba(100,141,174,0.6)]"></div>
+        <div class="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.15)_50%,transparent_100%)] animate-pulse"></div>
       </div>
-    </section>
+    </div>
+  </div>
+
+  <!-- 3-Column layout -->
+  <div class="relative z-10 flex-1 flex items-center">
+    <div class="max-w-7xl mx-auto w-full px-4 md:px-10 py-8">
+      <div class="hero-main-grid grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 lg:gap-10 items-center">
+
+        <!-- LEFT: Identity -->
+        <div class="flex flex-col gap-5 md:text-left text-center order-2 md:order-1 md:max-w-108">
+
+          <!-- Status badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-lumon-800/40 border border-lumon-600/40 w-fit mx-auto md:mx-0">
+            <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-[0_0_6px_#4ade80]"></div>
+            <span class="text-xs font-mono font-bold text-lumon-300 uppercase tracking-wider">System: Online</span>
+          </div>
+
+          <!-- Name -->
+          <div>
+            <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-none tracking-tight">
+              Jolande<br/>Steenput
+            </h1>
+            <p class="font-mono text-xs text-lumon-400 uppercase tracking-widest mt-2">EMP-ID: JS-0042 &nbsp;|&nbsp; Brussels, Belgium</p>
+          </div>
+
+          <!-- Role subtitle -->
+          <p class="text-lumon-300 text-base md:text-lg font-medium leading-snug border-l-2 border-lumon-500 pl-4">
+            Software Developer building<br/>data-driven digital systems.
+          </p>
+
+          <!-- Short intro -->
+          <p class="text-lumon-400 text-sm leading-relaxed max-w-sm mx-auto md:mx-0">
+            Bridging corporate finance expertise with modern web engineering.
+            I build structured, data-centric applications using Angular and TypeScript.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3 mt-2 justify-center md:justify-start">
+            <a href="#projects" class="lumon-btn-primary">
+              <span class="text-lumon-400 mr-1">[</span>
+              Access Projects
+              <span class="text-lumon-400 ml-1">]</span>
+            </a>
+            <a href="#about" class="lumon-btn-secondary">
+              <span class="text-lumon-500 mr-1">[</span>
+              Read Bio
+              <span class="text-lumon-500 ml-1">]</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CENTER: Avatar -->
+        <div class="flex flex-col items-center order-1 md:order-2 md:justify-self-center md:-translate-y-2">
+          <!-- Avatar frame -->
+          <div class="avatar-frame relative">
+            <!-- Corner brackets -->
+            <span class="corner-bracket top-2 left-2 border-t-2 border-l-2"></span>
+            <span class="corner-bracket top-2 right-2 border-t-2 border-r-2"></span>
+            <span class="corner-bracket bottom-2 left-2 border-b-2 border-l-2"></span>
+            <span class="corner-bracket bottom-2 right-2 border-b-2 border-r-2"></span>
+
+            <!-- Avatar image -->
+            <img
+              src="/avatar-js.png"
+              alt="Jolande Steenput — pixel art avatar"
+              class="avatar-img"
+            />
+
+            <!-- Floating UI chips around avatar -->
+            <span class="avatar-chip -top-3 left-1/2 -translate-x-1/2 font-mono text-xs text-lumon-300">&#123; js &#125;</span>
+            <span class="avatar-chip -bottom-3 left-1/2 -translate-x-1/2 font-mono text-xs text-lumon-300">&lt;/&gt;</span>
+            <span class="avatar-chip top-1/2 -left-12 -translate-y-1/2 font-mono text-xs text-lumon-400">[ ]</span>
+            <span class="avatar-chip top-1/2 -right-12 -translate-y-1/2 font-mono text-xs text-lumon-400">&#9646;&nbsp;_</span>
+          </div>
+
+          <!-- Scan ID label below avatar -->
+          <div class="mt-5 text-center">
+            <p class="font-mono text-[10px] text-lumon-500 uppercase tracking-widest">Macrodata Refinement &bull; Dept. 4</p>
+            <p class="font-mono text-[10px] text-lumon-600 tracking-wider mt-0.5">SCAN VERIFIED &#10003;</p>
+          </div>
+        </div>
+
+        <!-- RIGHT: Dossier terminal block -->
+        <div class="order-3 flex flex-col gap-4 md:text-left text-center md:max-w-[24rem] md:justify-self-end w-full">
+          <div class="dossier-block">
+            <p class="font-mono text-[10px] text-lumon-500 uppercase tracking-widest mb-3 border-b border-lumon-700/50 pb-2">
+              &#9632; Employee Profile &mdash; Lumon Industries
+            </p>
+            <div class="space-y-2 font-mono text-sm text-left">
+              <div class="dossier-row">
+                <span class="dossier-label">Role</span>
+                <span class="dossier-value">Software Developer</span>
+              </div>
+              <div class="dossier-row">
+                <span class="dossier-label">Focus</span>
+                <span class="dossier-value">Angular / Data Applications</span>
+              </div>
+              <div class="dossier-row">
+                <span class="dossier-label">Background</span>
+                <span class="dossier-value">Corporate Finance &rarr; SWE</span>
+              </div>
+              <div class="dossier-row">
+                <span class="dossier-label">Stack</span>
+                <span class="dossier-value">TS &bull; Angular &bull; C/C++</span>
+              </div>
+              <div class="dossier-row">
+                <span class="dossier-label">Status</span>
+                <span class="dossier-value text-green-400">Active &bull; Open to work</span>
+              </div>
+            </div>
+            <!-- Blinking cursor -->
+            <p class="font-mono text-xs text-lumon-500 mt-4">&gt; awaiting input<span class="cursor-blink">_</span></p>
+          </div>
+
+          <!-- Compliance note -->
+          <p class="font-mono text-[10px] text-lumon-600 uppercase tracking-widest leading-relaxed mx-auto md:mx-0 max-w-xs md:text-left text-center">
+            This profile has been reviewed<br/>and approved by Lumon Legal.<br/>All data is confidential.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
